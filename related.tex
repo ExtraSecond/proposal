@@ -1,0 +1,21 @@
+\section{Related Work}
+
+\subsection{Operating Systems with Rust}
+
+Rust is a programming language designed to do system programming and has safety mechanisms designed in the core language.
+
+The browser has become de facto operating systems nowadays.
+Servo\cite{Servo} is a Rust version of browser engine designed by Mozilla.
+Yet, the browser engine is not a good fit for IoT as the code base tend to be huge.
+
+There have also been attempts on writing a new OS from scratch using Rust.
+Redox\cite{Redox} is a microkernel based OS, it is highly finished and totally useable with POSIX API implemented in Rust and a GUI for desktop users.
+Some individuals are also writing personal blogs\cite{OsPhil} to write an OS from scratch step by step, yet it is still not finished and only runs in QEMU. 
+
+Few attempts have been made on writing Rust based embeded OS, but non of them are target any specific security issues like we do.
+Tock\cite{levy2015ownership, levy2017tock, levy2017multiprogramming} is an embedded operating system designed for running multiple concurrent, mutually distrustful applications on Cortex-M and RISC-V based embedded platforms.
+Sergio finished an IoT OS framework in Rust\cite{cs140e} and leave the rest to the student as the course project in CS140e in Stanford.
+
+
+
+\subsection{IoT Security}
