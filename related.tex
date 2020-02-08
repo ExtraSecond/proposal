@@ -3,28 +3,38 @@
 \subsection{Operating Systems with Rust}
 
 The browser has become de facto operating systems nowadays.
-Servo\cite{Servo} is a Rust version of browser engine designed by Mozilla.
+Servo\cite{Servo} is a Rust version of the browser engine designed by Mozilla.
 Yet, the browser engine is not a good fit for IoT as the code base tends to be huge.
 
-There have also been attempts on writing a new OS from scratch using Rust.
-Redox\cite{Redox} is a microkernel based OS, it is highly finished and totally useable with POSIX API implemented in Rust and a GUI for desktop users.
+There have also been attempts to write a new OS from scratch using Rust.
+Redox\cite{Redox} is a microkernel-based OS, it is highly finished and useable with POSIX API implemented in Rust and a GUI for desktop users.
 Some individuals are also writing personal blogs\cite{OsPhil} to write an OS from scratch step by step, yet it is still not finished and only runs in QEMU. 
 
-Few attempts have been made on writing Rust based embeded OS, but non of them are target any specific security issues like we do.
+Few attempts have been made on writing Rust based embedded OS, but none of them targets any specific security issues as we do.
 Tock\cite{levy2015ownership, levy2017tock, levy2017multiprogramming} is an embedded operating system designed for running multiple concurrent, mutually distrustful applications on Cortex-M and RISC-V based embedded platforms.
-There have been comunity efforts on deliver tutorials through Github.com\cite{rpi-os-t0, rpi-os-t1}
-Sergio also finished an IoT OS framework in Rust\cite{cs140e} and leave the rest to the student as the course project in CS140e in Stanford.
+There have been community efforts to deliver tutorials through Github.com\cite{rpi-os-t0, rpi-os-t1}
+Sergio also finished an IoT OS framework in Rust\cite{cs140e} and leave the rest to the student as the course project in CS140e at Stanford.
 
 \subsection{IoT Security}
 
-In an IoT system miscellaneous IoT devices connect and interact with each other through network, which makes it vulnerable when devices are directly exposed. Common security issues of IoT system are divided into 3 categories: low-level issues, intermediate-level security issues and high-level security issues.
+In an IoT system, different IoT devices connect and interact with each other through the network, which makes it vulnerable when devices are directly exposed. 
+Common security issues of the IoT system are divided into three categories: low-level issues, intermediate-level security issues, and high-level security issues.
 
-Low-level security are based on vulnerabilities in physical layer of network and hardware layers of devices. For example, jamming attacks create illegal radio signals to disturb normal wireless communication between IoT devices\cite{xu2005feasibility,noubir2003low}. In addressing spoofing attack adversarial devices masquerade as normal devices to spread malicious network packets\cite{chen2007detecting}.
+Low-level security is based on vulnerabilities in the physical layer of network and hardware layers of devices. 
+For example, jamming attacks create illegal radio signals to disturb normal wireless communication between IoT devices\cite{xu2005feasibility,noubir2003low}. 
+In addressing spoofing attack, adversarial devices masquerade as normal devices to spread malicious network packets\cite{chen2007detecting}.
 
-Intermediate-level security issues of transportation layer such as routing mechanism. RPL attack is based on the vulnerability of routing protocol for low-power and lossy networks(RPL)\cite{dvir2011vera}. Attackers may compromise devices in network to leak privacy data.
+Intermediate-level security deals with transportation layer security, such as the routing mechanism. 
+RPL attack is based on the vulnerability of the routing protocol for low-power and lossy networks(RPL)\cite{dvir2011vera}. 
+Attackers may compromise devices in a network to leak private data.
 
-High-level security concerns vulnerable applications and interfaces on IoT devices. Many IoT management web interfaces are susceptible to attacks\cite{owasp2016url}. Insecure middleware for data process and behavior analysis may cause security issues such as MitM attack\cite{conzon2012virtus,levy2015ownership}. And insecure firmware may also throw a great threat to data privacy\cite{owasp2016url}.
+High-level security concerns about vulnerable applications and interfaces on IoT devices. 
+Many IoT management web interfaces are susceptible to attacks\cite{owasp2016url}. 
+Insecure middleware for data process and behavior analysis may cause security issues such as MitM attack\cite{conzon2012virtus,levy2015ownership}. 
+And insecure firmware may also throw a great threat to data privacy\cite{owasp2016url}.
 
-Some research aims to develop trustworthy standards of security IoT device and software. \textit{The Seven Properties}\cite{hunt2017the} come up with several required properties of highly secure devices, which covers many significant aspects of IoT security such as trusted computing, authentication, failure reporting and so on.
+Some research aims to develop trustworthy standards of security IoT devices and software. 
+\textit{The Seven Properties}\cite{hunt2017the} come up with several required properties of highly secure devices, which cover many significant aspects of IoT security, such as trusted computing, authentication, failure reporting, etc.
 
-SPIN\cite{hesselman2017spin} provides a set of complete solution for in-home networks security. It detect many common networks issue including DoS attack, privacy data leaking and device compromising.
+SPIN\cite{hesselman2017spin} provides a set of a complete solution for in-home network security. 
+It detects many common networks issue, including DoS attack, privacy data leaking, and device compromising.

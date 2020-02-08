@@ -1,23 +1,22 @@
 \section{Introduction}
 
-Internet of Things(IoT) has posted new security threats since its first appearance. It is estimated that "by 2020, More Than 25 Percent of Identified Attacks in Enterprises Will Involve IoT"\cite{gartner2016gartner}. Insecure network communication and susceptible applications make IoT systems vulnerable confronted with attack. Attackers may easily break unreliable devices since many of them are exposed on Internet\cite{kolias2017ddos}. Unencrypted data flows between heterogeneous devices also bring great privacy crisis\cite{khan2018iot}.
+Internet of Things(IoT) has posted new security threats since its first appearance. 
+It is estimated that "by 2020, More Than 25 Percent of Identified Attacks in Enterprises Will Involve IoT"\cite{gartner2016gartner}. 
+Insecure network communication and sensitive applications make IoT systems vulnerable confronted with an attack. 
+Attackers may easily break unreliable devices since many of them are exposed to the Internet\cite{kolias2017ddos}. 
+Unencrypted data flows between heterogeneous devices also bring great privacy crisis\cite{khan2018iot}.
 
-%\todo{1-2 paragraphs about how other people have solved this problem and how they fall short.}
-
-There have been efforts on how to secure IoT devices from a system perspective like \textit{The Seven Properties}\cite{hunt2017the} proposed by Galen Hunt. People have also worked on how to create new systems, for example, SPIN\cite{hesselman2017spin}. 
+There have been efforts on how to secure IoT devices from a system perspective like \textit{The Seven Properties}\cite{hunt2017the} proposed by Galen Hunt. 
+People have also worked on how to create new systems, for example, SPIN\cite{hesselman2017spin}. 
 Although their works focus on severe security issues, the kernel itself may crash due to common memory bugs caused by traditional system language.
 
 What's more, the performance and specialization of IoT devices are not taken into consideration in their work. 
 The most important parts of an IoT device are network module and physical sensors, so an OS kernel with a reliable and efficient network layer is required.
 
-%\todo{1 paragraph (optional) what is difficult about this problem.}
-
-%\todo{1-2 paragraphs about your plan on why it is better than current approaches.}
-
 In this work, we present the Rust IoT Operating System(\ritos).
 We plan to write a new IoT OS from scratch using Rust in the first stage.
 Rust is a programming language designed to do system programming and has safety mechanisms designed in the core language.
-It has powerful compile-time checks that find most of the common memory bugs.
+It has robust compile-time checks that find most of the common memory bugs.
 Therefore we can guarantee that there is a minimum number of bugs as most of them can be opt-out at compile time. 
 Another advantage of our customized OS is that we can reduce the trusted computing base(TCB) to a small LOC.
 
@@ -27,8 +26,6 @@ Therefore we arranged devices so that most of the \textit{Slave devices} are inv
 Machines outside this IoT network can only talk to the \textit{Master device}.
 We added extra authentication before a user can talk to the master device.
 
-%\todo{1 paragraph to summarize results, or for your project proposals summarize your anticipated results.}
-
 In the end, we would build this network. 
-We would use 2 \rpi to mimic a master device and a slave device. 
-We as the user would use a shell from our Laptop to issue commands(Since we are not interested in writing a fancy UI).
+We would use two \rpi to mimic a master device and a slave device. 
+We, as the user would use a shell from our Laptop to issue commands(Since we are not interested in writing a fancy UI).

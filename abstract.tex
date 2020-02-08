@@ -1,11 +1,11 @@
 \begin{abstract}
 
-Internet of Things(IoT) devices can be easily attacked since they always have software vulnerabilities in them.
-The attacker can then gain access to many of the devices in the same network using the first compromised device.
+Internet of Things(IoT) devices can suffer from software vulnerabilities in them.
+The attacker can then gain access to many of the devices in the same network using the first compromised device if a certain vulnerability is exploited.
 There are two ways we can mitigate this problem. 
 One is not not produce bugs while coding, which is quite hard except for the case when coding Rust.
-Another one is to make all devices disappear in public network and therefore there is no attack point at all.
-In this work we present \ritos, a newly designed OS for \rpi that is written in rust to guarantee safety. 
+Another one is to make all devices disappear in public networks, and therefore there is no attack point at all.
+In this work, we present \ritos, a newly designed OS for \rpi that is written in Rust to guarantee safety. 
 With this OS we further redesigned typical IoT architecture and use the notion of \textit{master device} and \textit{slave device} to make all \textit{slave devices}s disappear.
 By the end of this project, we would have a demo of how \textit{master device} control \textit{slave device} safely.
 

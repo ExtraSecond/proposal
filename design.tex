@@ -2,7 +2,7 @@
 
 In this section, we would describe in detail the components of our system and the advantages of them.
 The first component is a newly designed OS. 
-It takes a micro-kernel structure but add network traffic into the kernel.
+It takes a micro-kernel structure but adds the network stack into the kernel.
 We also argue that this OS design can help us redesign the IoT network so that it's less vulnerable to attacks.
 
 \subsection{\ritos}
@@ -53,7 +53,7 @@ In this \ritos, all processes are represented by an IP address with a port numbe
 \subsection{Redesign IoT Network}
 
 As shown in \autoref{fig::design::system-overview}, different devices are connected to a master device which controls everything.
-Instead of talking to different devices the user can only talk to the master device.
+Instead of talking to different devices, the user can only talk to the master device.
 This design guarantees that even if a malicious hacker has all passphrases of a user, he can't do any harm until he controls the master device.
 Since any slave device only talks to the master device, they can't temper with each other too.
 
@@ -111,4 +111,4 @@ Since any slave device only talks to the master device, they can't temper with e
 \subsection{Authtication}
 
 For a user to talk to the master device, an extra authentication needs to be done to guarantee that the "user" is not a hacker.
-This process can be done using 2FA, i.e. One-time password(OTP), email confirmation, etc.
+This process can be done using 2FA, i.e., One-time password(OTP), email confirmation, etc.
