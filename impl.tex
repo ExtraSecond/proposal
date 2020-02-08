@@ -1,0 +1,14 @@
+\section{Implementation}
+
+We would take down the parts and implement this system step by step.
+
+As the first step, we would implement \ritos on \rpi. 
+The milestone for the first stage is to ask \ritos to host two processes and for them to be able to communicate through network APIs.
+Here, to make things easier we would not implement encryption nor authentication yet.
+
+The second part would be to implement the drivers for LED light, slave process, and master process.
+By the end of this part, we would be able to connect two \rpis. 
+They should be able to identify who's the slave and who's the master according to configuration and master device can open a LED  connected to the slave device.
+
+The third part would be to secure all the things we have implemented.
+One would be to force devices to communicate through HTTPS, another would be to ask every entity in this network, including user himself, to prove them not malicious through authtication methods.

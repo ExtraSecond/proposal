@@ -6,10 +6,11 @@
 \usepackage{tikz}
 \usepackage{makecell}
 \usepackage{hyperref}
+\usepackage{xspace}
 
 \sloppy
 
-\title{Redesign IoT OS with Rust Programming Language}
+\title{You Can't Corrupt What You Couldn't See: Redesign IoT OS with Rust}
 \author{ \\ Computer Science @ UC Davis}
 
 \author{
@@ -32,6 +33,10 @@
 \pagenumbering{arabic}
 
 \newcommand{\todo}[1]{\textcolor{red}{#1}}
+\newcommand{\ritos}{RITOS\xspace}
+\newcommand{\rpi}{\textit{Raspberry Pi}\xspace}
+\newcommand{\rpis}{\textit{Raspberry Pi}s\xspace}
+
 \begin{document}
 
 \maketitle
@@ -39,6 +44,7 @@
 \input{abstract.tex}
 \input{intro.tex}
 \input{design.tex}
+\input{impl.tex}
 \input{related.tex}
 
 \bibliographystyle{abbrv}
