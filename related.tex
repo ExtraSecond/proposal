@@ -17,3 +17,10 @@ Sergio also finished an IoT OS framework in Rust\cite{cs140e} and leave the rest
 
 \subsection{IoT Security}
 
+In an IoT system miscellaneous IoT devices connect and interact with each other through network, which makes it vulnerable when devices are directly exposed. Common security issues of IoT system are divided into 3 categories: low-level issues, intermediate-level security issues and high-level security issues.
+
+Low-level security are based on vulnerabilities in physical layer of network and hardware layers of devices. For example, jamming attacks create illegal radio signals to disturb normal wireless communication between IoT devices\cite{xu2005feasibility,noubir2003low}. In addressing spoofing attack adversarial devices masquerade as normal devices to spread malicious network packets\cite{chen2007detecting}.
+
+Intermediate-level security issues of transportation layer such as routing mechanism. RPL attack is based on the vulnerability of routing protocol for low-power and lossy networks(RPL)\cite{dvir2011vera}. Attackers may compromise devices in network to leak privacy data.
+
+High-level security concerns vulnerable applications and interfaces on IoT devices. Many IoT management web interfaces are susceptible to attacks\cite{owasp2016url}. Insecure middleware for data process and behavior analysis may cause security issues such as MitM attack\cite{conzon2012virtus,levy2015ownership}. And insecure firmware may also throw a great threat to data privacy\cite{owasp2016url}.
