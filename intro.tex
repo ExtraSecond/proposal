@@ -4,15 +4,17 @@ Internet of Things(IoT) has posted new security threats since its first appearan
 
 %\todo{1-2 paragraphs about how other people have solved this problem and how they fall short.}
 
-There have been efforts on how to secure IoT devices from a system perspective like \textit{The Seven Properties}\cite{hunt2017the} proposed by Galen Hunt. People have also worked on how to create new systems including SPIN\cite{hesselman2017spin} and Tock\cite{levy2017tock}. Although their works focus on severe security issues, the kernel itself may crash due to common memory bugs caused by traditional system language.
+There have been efforts on how to secure IoT devices from a system perspective like \textit{The Seven Properties}\cite{hunt2017the} proposed by Galen Hunt. People have also worked on how to create new systems, for example, SPIN\cite{hesselman2017spin}. 
+Although their works focus on severe security issues, the kernel itself may crash due to common memory bugs caused by traditional system language.
 
-What's more, performance and specialization of IoT devices is not taken into consideration in their work. The most important parts of an IoT device are network module and physical sensors, so an OS kernel with reliable and efficient network layer is required.
+What's more, the performance and specialization of IoT devices are not taken into consideration in their work. 
+The most important parts of an IoT device are network module and physical sensors, so an OS kernel with a reliable and efficient network layer is required.
 
 %\todo{1 paragraph (optional) what is difficult about this problem.}
 
 %\todo{1-2 paragraphs about your plan on why it is better than current approaches.}
 
-In this work, we present the Rust IoT Operating System(RITOS).
+In this work, we present the Rust IoT Operating System(\ritos).
 We plan to write a new IoT OS from scratch using Rust in the first stage.
 Rust is a programming language designed to do system programming and has safety mechanisms designed in the core language.
 It has powerful compile-time checks that find most of the common memory bugs.
