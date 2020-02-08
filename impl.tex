@@ -1,0 +1,14 @@
+\section{Implementation}
+
+We would take down the parts and implement this system step by step.
+
+As the first step we would implement IoTOS on \rpi. 
+The mile stone for the first stage is to ask IoTOS to host two processes and for them to be able to communicate through network APIs.
+Here, to make things easier we would not implement encryption nor authantication yet.
+
+The second part would be to implement the drivers for LED light, slave process and master process.
+By the end of this part we would be able to connect two \rpis. 
+They should be able to identify who's slave and who's master according to configuration and master device is able to open a LED  connected to slave device.
+
+The thrid part would be to secure all the things we have implemented.
+One would be to force devices communite through HTTPS, another would be to ask every entity in this network, including user himself, to proof them not malicious through authtication methods.

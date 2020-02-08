@@ -6,6 +6,7 @@
 \usepackage{tikz}
 \usepackage{makecell}
 \usepackage{hyperref}
+\usepackage{xspace}
 
 \sloppy
 
@@ -32,6 +33,9 @@
 \pagenumbering{arabic}
 
 \newcommand{\todo}[1]{\textcolor{red}{#1}}
+\newcommand{\rpi}{\textit{Raspberry Pi}\xspace}
+\newcommand{\rpis}{\textit{Raspberry Pi}s\xspace}
+
 \begin{document}
 
 \maketitle
@@ -39,6 +43,7 @@
 \input{abstract.tex}
 \input{intro.tex}
 \input{design.tex}
+\input{impl.tex}
 \input{related.tex}
 
 \bibliographystyle{abbrv}

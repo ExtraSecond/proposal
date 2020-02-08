@@ -1,5 +1,12 @@
 \section{Design}
 
+In this section, we would describe in detail the components of our system and the advantages of them.
+The first component is a newly designed OS. 
+It takes a micro-kernel structure but add network traffic into the kernel.
+We also argue that this OS design can help us redesign the IoT network so that it's less vulnerable to attacks.
+
+\subsection{IoTOS}
+
 As shown in \autoref{fig::design::os-overview}, our system take a micro-kernel architecture.
 However, we intend to put the network stack inside the kernel.
 Therefore, instead of providing \texttt{send()} and \texttt{recv()} system calls, we would make all POSIX APIs with regard to networks our system calls, including \texttt{socket()}, \texttt{recv()}, \texttt{send()}, etc.
@@ -43,9 +50,11 @@ In this IoTOS, all processes are represented by an IP address with a port number
 \label{fig::design::os-overview}
 \end{figure}
 
+\subsection{Redesign IoT Network}
+
 As shown in \autoref{fig::design::system-overview}, different devices are connected to a master device which controls everything.
 Instead of talking to different devices the user can only talk to the master device.
-This design guarantees that only when a malicious hacker has all passphrases of a user, he can't do any harm until he controls the master device.
+This design guarantees that even if a malicious hacker has all passphrases of a user, he can't do any harm until he controls the master device.
 Since any slave device only talks to the master device, they can't temper with each other too.
 
 \begin{figure*}[h]
@@ -98,6 +107,8 @@ Since any slave device only talks to the master device, they can't temper with e
 \caption{System overview}
 \label{fig::design::system-overview}
 \end{figure*}
+
+\subsection{Authtication}
 
 For a user to talk to the master device, an extra authentication needs to be done to guarantee that the "user" is not a hacker.
 This process can be done using 2FA, i.e. One-time password(OTP), email confirmation, etc.
