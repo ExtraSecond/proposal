@@ -1,14 +1,21 @@
-\section{Implementation}
+\section{Time line \& milestones}
 
 We would take down the parts and implement this system step by step.
 
-As the first step, we would implement \ritos on \rpi. 
-The milestone for the first stage is to ask \ritos to host two processes, and for them to be able to communicate through network APIs.
-Here, to make things easier, we would not implement encryption nor authentication yet.
+\begin{itemize}
+    \item By 2/19 we would have a free-standing rust application running upon L4\cite{L4}. L4 is a microkernel that takes care of underline hardwares.
 
-The second part would be to implement the drivers for LED light, slave process, and master process.
-By the end of this part, we would be able to connect two \rpis. 
-They should be able to identify who's the slave and who's the master according to configuration and master device can open a LED  connected to the slave device.
+    \item By 2/26 we should have basic \ritos on \rpi running. 
+    The milestone would be to ask \ritos to host two processes, and for them to be able to communicate through network APIs.
+    Here, to make things easier, we would not implement encryption nor authentication yet.
 
-The third part would be to secure all the things we have implemented.
-One would be to force devices to communicate through HTTPS; another would be to ask every entity in this network, including the user himself, to prove them not malicious through authentication methods.
+    \item By 3/4 we would have GPIO and network drivers ready.
+    By the end of this part, we would be able to connect two \rpis. 
+    They should be able to identify who's the slave and who's the master according to configuration and master device can open a LED  connected to the slave device.
+    
+    \item By 3/11 part would be to secure all the things we have implemented and we would have code freeze.
+    One would be to force devices to communicate through HTTPS; another would be to ask every entity in this network, including the user himself, to prove them not malicious through authentication methods.
+    
+    \item Final report should be done by 3/19.
+
+\end{itemize}

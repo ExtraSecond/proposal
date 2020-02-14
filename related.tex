@@ -1,10 +1,20 @@
 \section{Related Work}
 
-\subsection{Operating Systems with Rust}
+\subsection{Types of OSes}
 
-The browser has become de facto operating systems nowadays.
-Servo\cite{Servo} is a Rust version of the browser engine designed by Mozilla.
-Yet, the browser engine is not a good fit for IoT as the code base tends to be huge.
+\todo{
+    \begin{itemize}
+        \item Micro kernel
+        \item Mono kernel
+        \item Hybrid
+    \end{itemize}
+}
+
+\subsection{OS in different programming languages}
+
+\subsubsection{Rust}
+Rust has contributed a lot to OS development trials in programming languages other than C.
+Servo\cite{Servo} is a Rust version of the browser engine designed by Mozilla since browsers have become de facto operating systems nowadays.
 
 There have also been attempts to write a new OS from scratch using Rust.
 Redox\cite{Redox} is a microkernel-based OS, it is highly finished and useable with POSIX API implemented in Rust and a GUI for desktop users.
@@ -15,10 +25,24 @@ Tock\cite{levy2015ownership, levy2017tock, levy2017multiprogramming} is an embed
 There have been community efforts to deliver tutorials through Github.com\cite{rpi-os-t0, rpi-os-t1}
 Sergio also finished an IoT OS framework in Rust\cite{cs140e} and leave the rest to the student as the course project in CS140e at Stanford.
 
-\subsection{\todo{Operating Systems with C\#}}
+\subsubsection{Go}
 
-\todo{C\# open source managed operating system (COSMOS) is written in C\#. They first translate C\# into Common Intermediate Language and then use IL2CPU (IL to CPU) to translate CIL to machine code for CPU. IL2CPU is an AOT compiler that is written in a Common Intermediate Language compliant language (C\#). Now they only achieve a High Level Assembler (HLA) for X86/X64 assembly. In the future, other processors are planned.}
+Go is a relatively new and powerful language. 
+\todo{GoBot\cite{gobot}}
 
+\subsubsection{C\#}
+\todo{
+    C\# Open-Source Managed Operating System(COSMOS)\cite{cosmos} is the first to translate C\# into Common Intermediate Language(CIL) and then use IL2CPU(IL to CPU) to translate CIL to machine codes.
+    IL2CPU is an Ahead-of-Time(AOT) compiler that is written in a CIL compliant language(C\#). 
+    Now they only achieve a High-Level Assembler (HLA) for X86/X64 assembly. In the future, other processors are planned.
+}
+
+\subsubsection{Java}
+\todo{
+    Java New Operating System Design Effort(JNode)\cite{jnode} is a Java OS for personal use that runs on modern devices.
+    JNode is microkernel structured, its kernel and VM are written in assembler. 
+    To enhance performance, all Java code executed on Jnode is compiled to native code on-the-fly before it is executed. 
+}
 
 \subsection{IoT Security}
 
@@ -27,7 +51,7 @@ Common security issues of the IoT system are divided into three categories: low-
 
 Low-level security is based on vulnerabilities in the physical layer of network and hardware layers of devices. 
 For example, jamming attacks create illegal radio signals to disturb normal wireless communication between IoT devices\cite{xu2005feasibility,noubir2003low}. 
-In addressing spoofing attack, adversarial devices masquerade as normal devices to spread malicious network packets\cite{chen2007detecting}.
+In addressing-spoofing attack, adversarial devices masquerade as normal devices to spread malicious network packets\cite{chen2007detecting}.
 
 Intermediate-level security deals with transportation layer security, such as the routing mechanism. 
 RPL attack is based on the vulnerability of the routing protocol for low-power and lossy networks(RPL)\cite{dvir2011vera}. 
