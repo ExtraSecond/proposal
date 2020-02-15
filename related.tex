@@ -2,13 +2,13 @@
 
 \subsection{Types of OSes}
 
-\todo{
+Operating system kernels can be divided into three types according to the design principle:
+
     \begin{itemize}
-        \item Micro kernel
-        \item Mono kernel
-        \item Hybrid
+        \item Microkernel. A microkernel only includes minimal set of components in kernel mode to implement an operating system, such as IPC (inter-process communication) and memory management. GNU Hurd\cite{stallman1998gnu} is a typical example of microkernel.
+        \item Monolithic kernel. A monolithic kernel entirely runs in kernel mode, which is composed of device management, memory management and system call. BSD\cite{mckusick1996design} and Linux\cite{stallman1997linux} are both widely used monolithic kernel.
+        \item Hybrid kernel. Many OS kernels designed with microkernel principal implement some common structures in kernel mode rather than user mode, which combines the benefits of the microkernel and the monolithic kernel. NT\cite{solomon1998inside} and XNU\cite{singh2006mac} are both hybrid kernels.
     \end{itemize}
-}
 
 \subsection{OS in different programming languages}
 
@@ -25,24 +25,17 @@ Tock\cite{levy2015ownership, levy2017tock, levy2017multiprogramming} is an embed
 There have been community efforts to deliver tutorials through Github.com\cite{rpi-os-t0, rpi-os-t1}
 Sergio also finished an IoT OS framework in Rust\cite{cs140e} and leave the rest to the student as the course project in CS140e at Stanford.
 
-\subsubsection{Go}
-
-Go is a relatively new and powerful language. 
-\todo{GoBot\cite{gobot}}
-
 \subsubsection{C\#}
-\todo{
-    C\# Open-Source Managed Operating System(COSMOS)\cite{cosmos} is the first to translate C\# into Common Intermediate Language(CIL) and then use IL2CPU(IL to CPU) to translate CIL to machine codes.
-    IL2CPU is an Ahead-of-Time(AOT) compiler that is written in a CIL compliant language(C\#). 
-    Now they only achieve a High-Level Assembler (HLA) for X86/X64 assembly. In the future, other processors are planned.
-}
+
+C\# Open-Source Managed Operating System (COSMOS) \cite{cosmos} is the first to translate C\# into Common Intermediate Language(CIL) and then use IL2CPU(IL to CPU) to translate CIL to machine codes.
+IL2CPU is an Ahead-of-Time(AOT) compiler that is written in a CIL compliant language(C\#). 
+Now they only achieve a High-Level Assembler (HLA) for X86/X64 assembly. In the future, other processors are planned.
 
 \subsubsection{Java}
-\todo{
-    Java New Operating System Design Effort(JNode)\cite{jnode} is a Java OS for personal use that runs on modern devices.
-    JNode is microkernel structured, its kernel and VM are written in assembler. 
-    To enhance performance, all Java code executed on Jnode is compiled to native code on-the-fly before it is executed. 
-}
+
+Java New Operating System Design Effort (JNode)\cite{jnode} is a Java OS for personal use that runs on modern devices.
+JNode is microkernel structured, its kernel and VM are written in assembler. 
+To enhance performance, all Java code executed on Jnode is compiled to native code on-the-fly before it is executed. 
 
 \subsection{IoT Security}
 
